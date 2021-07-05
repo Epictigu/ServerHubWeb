@@ -1,0 +1,118 @@
+html, body {
+    height: 100%;
+}
+
+#main {
+    font-family: 'Roboto', sans-serif;
+
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: nowrap;
+
+    margin: 0;
+    background: #F9D423;
+}
+
+#mainpart {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    flex-wrap: nowrap;
+
+    background: white;
+    min-width: 90em;
+    height: 100%;
+
+    box-shadow: 2px 0 5px hsla(0, 0%, 0%, 0.35), -2px 0 5px hsla(0, 0%, 0%, 0.35);
+}
+
+header img {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#serverinfoheader {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#serverinfoheader h1 {
+    color: #d7221e;
+    font-size: 50px;
+    margin-bottom: 10px;
+}
+
+#serverinfoheader p {
+    font-size: 15px;
+    opacity: 0.8;
+    margin-top: 0px;
+}
+
+#serverinfo {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 79em;
+}
+
+#serverinfo .server {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    background-color: rgb(241, 241, 241);
+    padding: 25px;
+    width: 20em;
+    height: 10em;
+    border-radius: 5px;
+    /* box-shadow: 2px 2px 5px hsla(0, 0%, 0%, 0.35); */
+    box-shadow: 2px 2px rgb(170, 170, 170);
+
+    margin: 5px;
+}
+
+#serverinfo .server:hover {
+    background-color: rgb(231, 231, 231);
+}
+
+#serverinfo .server .serverheader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    flex-wrap: nowrap;
+
+    margin-bottom: 25px;
+}
+
+#serverinfo .server .serverheader img {
+
+    margin-bottom: 10px;
+}
+
+#serverinfo .server .serverheader span {
+    color: #d7221e;
+    font-size: 20px;
+}
+
+#serverinfo .server .serverdesc {
+    display: grid;
+}
+
+#serverinfo .server .serverdesc .infoh {
+    grid-column-start: 1;
+}
+
+#serverinfo .server .serverdesc .infod {
+    grid-column-start: 2;
+}
