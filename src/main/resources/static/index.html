@@ -20,16 +20,36 @@
 </head>
 
 <body id="main">
-    <header>
-        <img src="images/phoenix.png" />
-    </header>
 
     <div id="mainpart">
-        <section id="serverinfoheader">
-            <h1>Unsere Server</h1>
-            <p>Dies sind die uns momentan zur Verfügung stehenden Server und ihr derzeitiger Status.</p>
+        <section id="header">
+            <div id="headermain">
+                <ul class ="navigation">
+                    <img src="images/phoenix_navigation.png" id="mainimage"/>
+                    <li class="navigationitem">
+                        <button class="menubutton" id="serverbutton">Server</button>
+                        <div class="dropdown">
+                            <span id="minecraftdrop">Minecraft</span>
+                            <span id="valheimdrop">Valheim</span>
+                        </div>
+                    </li>
+                    <li class="navigationitem">
+                        <button class="menubutton" id="testbutton">Test</button>
+                        <div class="dropdown">
+                            <span id="test1">Test 1</span>
+                            <span id="test2">Test 2</span>
+                        </div>
+                    </li>
+                </ul>
+            </div>
         </section>
-        <section id="serverinfo"></section>
+        <div id="maindiv">
+            <section id="serverinfoheader">
+                <h1>Unsere Server</h1>
+                <p>Dies sind die uns momentan zur Verfügung stehenden Server und ihr derzeitiger Status.</p>
+            </section>
+            <section id="serverinfo"></section>
+        </div>
     </div>
 </body>
 </html>

@@ -20,14 +20,103 @@ html, body {
     flex-wrap: nowrap;
 
     background: white;
-    min-width: 90em;
     height: 100%;
 }
 
-header img {
+#header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    background: rgb(41, 41, 41);
+
+    box-shadow: 0 3px 0 rgb(216, 68, 68);
+}
+
+#header #headermain {
+    font-size: 14px;
+    width: 80em;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#header #headermain .navigation #mainimage {
+    margin-right: 2em;
+}
+
+#header #headermain .navigation #mainimage:hover {
+    cursor: pointer;
+}
+
+#header #headermain .navigation {
+    flex-direction: row;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
+#header #headermain .menubutton {
+    background: inherit;
+    border: none;
+    font-size: 25px;
+    padding: 8px;
+    color: white;
+}
+
+#header #headermain .menubutton::after {
+    display: inline-block;
+    margin-left: .255em;
+    vertical-align: .255em;
+    content: "";
+    border-top: .3em solid;
+    border-right: .3em solid transparent;
+    border-bottom: 0;
+    border-left: .3em solid transparent;
+}
+
+#header #headermain .menubutton:hover {
+    color: rgb(216, 68, 68);
+    cursor: pointer;
+}
+
+#header #headermain .navigationitem {
+    position: relative;
+    margin-bottom: auto;
+    margin-top: auto;
+}
+
+#header #headermain .navigationitem .dropdown {
+    display: none;
+    background: rgb(236, 236, 236);
+    border-radius: 4px;
+    padding-top: 8px;
+    padding-bottom: 8px;
     position: absolute;
     left: 0;
-    top: 0;
+    min-width: 10em;
+    font-size: 18px;
+}
+
+#header #headermain .navigationitem .dropdown span {
+    padding: 8px;
+}
+
+#header #headermain .navigationitem .dropdown span:hover{
+    background: rgb(216, 68, 68);
+    color: white;
+    cursor: pointer;
+}
+
+#header #headermain .navigationitem:hover .dropdown {
+    display: flex;
+    flex-direction: column;
+}
+
+#maindiv {
+    margin-top: 85px;
 }
 
 #serverinfoheader {
