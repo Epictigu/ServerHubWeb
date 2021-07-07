@@ -11,7 +11,6 @@ html, body {
     flex-wrap: nowrap;
 
     margin: 0;
-    background: #F9D423;
 }
 
 #mainpart {
@@ -23,8 +22,6 @@ html, body {
     background: white;
     min-width: 90em;
     height: 100%;
-
-    box-shadow: 2px 0 5px hsla(0, 0%, 0%, 0.35), -2px 0 5px hsla(0, 0%, 0%, 0.35);
 }
 
 header img {
@@ -115,4 +112,21 @@ header img {
 
 #serverinfo .server .serverdesc .infod {
     grid-column-start: 2;
+}
+
+#serverinfo .server .serverdesc .serverip {
+    margin-bottom: 5px;
+}
+
+#serverinfo .server .serverdesc .serverstatus.infoh {
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#serverinfo .server .serverdesc .serverstatus.infod {
+    background: #d7221e;
+    color: white;
+    padding: 5px;
+    border-radius: 4px;
+    margin-right: auto;
 }

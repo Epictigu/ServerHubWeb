@@ -61,7 +61,14 @@ function addServer(server){
     descDiv.insertAdjacentHTML("beforeend", '<span class="serverip infod">' + 'epicclan.eu' + '</span>');
 
     descDiv.insertAdjacentHTML("beforeend", '<span class="serverstatus infoh">Status:</span>');
-    descDiv.insertAdjacentHTML("beforeend", '<span class="serverstatus infod">' + server.status + '</span>');
+
+    var spanStatus = document.createElement("span");
+    spanStatus.className = "serverstatus infod";
+    spanStatus.innerHTML = server.status;
+    if(server.status === "Offline"){
+        spanStatus.style.backgroundColor = "#6d6d6d"
+    }
+    descDiv.appendChild(spanStatus);
 
     serverDiv.appendChild(headerDiv);
     serverDiv.appendChild(descDiv);

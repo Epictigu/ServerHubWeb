@@ -15,7 +15,8 @@ public class ServerList {
 		for(int i = 0; i < servers.length; i++) {
 			String status = "Offline";
 			try {
-				if(execStatusCmd(servers[i].getStatusCheck()) != null)
+				String cmd = execStatusCmd(servers[i].getStatusCheck());
+				if(cmd != null)
 					status = "Online";
 			} catch(IOException e) {
 				System.err.println("[ERROR] Status-Befehl für [" + servers[i].getName() + "] konnte nicht ausgeführt werden!");
@@ -32,7 +33,8 @@ public class ServerList {
 	
 	@SuppressWarnings("resource")
 	private String execStatusCmd(String cmd) throws IOException {
-		Scanner s = new Scanner(Runtime.getRuntime().exec(cmd).getInputStream()).useDelimiter("\\A");
+		String[] cmds = { "/bin/sh", "-c", cmd };
+		Scanner s = new Scanner(Runtime.getRuntime().exec(cmds).getInputStream()).useDelimiter("\\A");
 		String r = null;
 		if(s.hasNext()) {
 			r = s.next();
