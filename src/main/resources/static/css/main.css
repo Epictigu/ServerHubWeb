@@ -100,11 +100,13 @@ html, body {
     font-size: 18px;
 }
 
-#header #headermain .navigationitem .dropdown span {
+#header #headermain .navigationitem .dropdown .dropdownelement {
+	color: black;
+	text-decoration: none;
     padding: 8px;
 }
 
-#header #headermain .navigationitem .dropdown span:hover{
+#header #headermain .navigationitem .dropdown .dropdownelement:hover{
     background: rgb(216, 68, 68);
     color: white;
     cursor: pointer;
@@ -218,4 +220,25 @@ html, body {
     padding: 5px;
     border-radius: 4px;
     margin-right: auto;
+}
+
+#notfound {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+    align-items:center;
+    justify-content:center;
+
+    width: 100%;
+    height: 100%;
+}
+
+.notfoundh {
+    font-size: 97px;
+    margin: 0;
+}
+
+.notfoundd {
+    margin: 0;
 }
