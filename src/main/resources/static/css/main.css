@@ -21,10 +21,11 @@ html, body {
 
     background: white;
     height: 100%;
+    width: 100%;
 }
 
 #header {
-    position: fixed;
+    /* position: fixed; */
     top: 0;
     right: 0;
     left: 0;
@@ -43,6 +44,13 @@ html, body {
     margin-right: auto;
 }
 
+#header #headermain .navigation {
+    flex-direction: row;
+    list-style: none;
+    display: flex;
+    padding-left: 0;
+}
+
 #header #headermain .navigation #mainimage {
     margin-right: 2em;
 }
@@ -51,19 +59,13 @@ html, body {
     cursor: pointer;
 }
 
-#header #headermain .navigation {
-    flex-direction: row;
-    list-style: none;
-    display: flex;
-    padding-left: 0;
-}
-
 #header #headermain .menubutton {
     background: inherit;
     border: none;
     font-size: 25px;
     padding: 8px;
     color: white;
+    text-decoration: none;
 }
 
 #header #headermain .menubutton::after {
@@ -232,13 +234,37 @@ html, body {
 
     width: 100%;
     height: 100%;
+
+    color: white;
+    background:rgb(216, 68, 68)
 }
 
 .notfoundh {
-    font-size: 97px;
+    font-size: 102px;
     margin: 0;
 }
 
 .notfoundd {
+    font-size: 25px;
     margin: 0;
+}
+
+.grayshadow {
+    text-shadow:1px 1px 0 rgb(126, 126, 126)
+}
+
+.fixed {
+    position: fixed;
+}
+
+#map {
+    width: 100%;
+    height: 100%;
+}
+
+#mapview {
+    width: 100%;
+    height: 100%;
+
+    border: 0;
 }

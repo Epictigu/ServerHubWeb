@@ -16,6 +16,9 @@ public class WebSocketMvcConfig implements WebMvcConfigurer {
 	public void addViewControllers(ViewControllerRegistry registry) {
 		registry.addViewController("/not-found").setViewName("redirect:/not-found/");
 		registry.addViewController("/not-found/").setViewName("forward:/not-found/index.html");
+		
+		registry.addViewController("/minecraft/map").setViewName("redirect:/minecraft/map/");
+		registry.addViewController("/minecraft/map/").setViewName("forward:/minecraft/map/index.html");
 	}
 
 	@Bean

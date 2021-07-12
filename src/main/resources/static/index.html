@@ -22,23 +22,24 @@
 <body id="main">
 
     <div id="mainpart">
-        <section id="header">
+        <section id="header" class="fixed">
             <div id="headermain">
                 <ul class ="navigation">
-                	<li id="mainimage">
-                		<a href="/">
-                			<img src="images/phoenix_navigation.png"/>
-                		</a>
-                	</li>
+                    <li id="mainimage">
+                        <a href="/">
+                            <img src="/images/phoenix_navigation.png" />
+                        </a>
+                    </li>
                     <li class="navigationitem">
-                        <button class="menubutton" id="serverbutton">Server</button>
+                        <a href="/minecraft" class="menubutton" id="serverbutton">Minecraft</a>
                         <div class="dropdown">
-                            <a href="/minecraft" class="dropdownelement" id="minecraftdrop">Minecraft</a>
-                            <a href="/valheim" class="dropdownelement" id="valheimdrop">Valheim</a>
+                            <a href="/minecraft/map" class="dropdownelement" id="mapdrop">Online Map</a>
+                            <a href="/minecraft/changelog" class="dropdownelement" id="changelogdrop">Changelog</a>
+                            <a href="/minecraft/crafting" class="dropdownelement" id="craftingdrop">Crafting Rezepte</a>
                         </div>
                     </li>
                     <li class="navigationitem">
-                        <button class="menubutton" id="testbutton">Test</button>
+                        <a href="/test" class="menubutton" id="testbutton">Test</a>
                         <div class="dropdown">
                             <a href="/test1" class="dropdownelement" id="test1">Test 1</a>
                             <a href="/test2" class="dropdownelement" id="test2">Test 2</a>
