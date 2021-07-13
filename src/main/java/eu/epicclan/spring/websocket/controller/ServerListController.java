@@ -1,9 +1,10 @@
-package eu.epicclan.spring.websocket;
+package eu.epicclan.spring.websocket.controller;
 
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.simp.annotation.SendToUser;
 import org.springframework.stereotype.Controller;
 
+import eu.epicclan.spring.websocket.WebsocketApplication;
 import eu.epicclan.spring.websocket.utils.ServerList;
 
 @Controller

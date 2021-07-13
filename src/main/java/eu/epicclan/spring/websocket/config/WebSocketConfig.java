@@ -1,4 +1,4 @@
-package eu.epicclan.spring.websocket;
+package eu.epicclan.spring.websocket.config;
 
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.annotation.Bean;

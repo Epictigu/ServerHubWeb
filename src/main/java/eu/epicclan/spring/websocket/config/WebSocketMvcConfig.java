@@ -1,4 +1,4 @@
-package eu.epicclan.spring.websocket;
+package eu.epicclan.spring.websocket.config;
 
 import org.springframework.boot.web.server.ErrorPage;
 import org.springframework.boot.web.server.WebServerFactoryCustomizer;
