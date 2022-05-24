@@ -8,6 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 import eu.epicclan.spring.websocket.config.AppConfiguration;
 import eu.epicclan.spring.websocket.manager.FileManager;
+import eu.epicclan.spring.websocket.manager.SocketManager;
 import eu.epicclan.spring.websocket.utils.ServerFile;
 
 @SpringBootApplication
@@ -18,7 +19,7 @@ public class WebsocketApplication {
 	
 	public static void main(String[] args) {
 		try {
-			FileManager.loadConfiguration("config.yml");
+			conf = FileManager.loadConfiguration("config.yml");
 		} catch(FileNotFoundException e) {
 			try {
 				FileManager.createNewConfiguration("config.yml");
@@ -35,6 +36,9 @@ public class WebsocketApplication {
 		
 		
 		sFile = FileManager.loadFile("data.txt");
+		
+		SocketManager sManager = new SocketManager(sFile, conf);
+		sManager.startTask();
 		
 		SpringApplication.run(WebsocketApplication.class, args);
 	}
