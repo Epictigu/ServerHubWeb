@@ -6,6 +6,7 @@ public class ServerInfo {
 	private String desc;
 	private String status;
 	private String icon;
+	private String category;
 	
 	public ServerInfo() {
 	}
@@ -14,6 +15,7 @@ public class ServerInfo {
 		name = server.getName();
 		desc = server.getDesc();
 		icon = server.getIcon();
+		category = server.getCategory();
 		
 		this.status = status;
 	}
@@ -32,6 +34,10 @@ public class ServerInfo {
 	
 	public String getIcon() {
 		return icon;
+	}
+	
+	public String getCategory() {
+		return category;
 	}
 	
 }
