@@ -73,7 +73,7 @@ public class FileManager {
 		Yaml yaml = new Yaml(rep, options);
 		
 		FileWriter fWriter = new FileWriter(f);
-		yaml.dump(new AppConfiguration(), fWriter);
+		yaml.dump(AppConfiguration.getInstance(), fWriter);
 	}
 	
 }

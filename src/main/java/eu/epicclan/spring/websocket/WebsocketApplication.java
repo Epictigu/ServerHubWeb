@@ -2,6 +2,7 @@ package eu.epicclan.spring.websocket;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Properties;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -15,11 +16,11 @@ import eu.epicclan.spring.websocket.utils.ServerFile;
 public class WebsocketApplication {
 	
 	public static ServerFile sFile;
-	public static AppConfiguration conf;
+	//public static AppConfiguration conf;
 	
 	public static void main(String[] args) {
 		try {
-			conf = FileManager.loadConfiguration("config.yml");
+			FileManager.loadConfiguration("config.yml");
 		} catch(FileNotFoundException e) {
 			try {
 				FileManager.createNewConfiguration("config.yml");
@@ -37,10 +38,24 @@ public class WebsocketApplication {
 		
 		sFile = FileManager.loadFile("data.txt");
 		
-		SocketManager sManager = new SocketManager(sFile, conf);
+		SocketManager sManager = new SocketManager(sFile, AppConfiguration.getInstance());
 		sManager.startTask();
 		
-		SpringApplication.run(WebsocketApplication.class, args);
+		SpringApplication application = new SpringApplication(WebsocketApplication.class);
+		application.setDefaultProperties(getApplicationProperties());
+		application.run(args);
+	}
+	
+	private static Properties getApplicationProperties() {
+		Properties properties = new Properties();
+		
+//		properties.put("spring.datasource.url", "jdbc:mysql://localhost:3306/testdb?useSSL=false");
+//		properties.put("spring.datasource.username", conf.getSql().getUser());
+//		properties.put("spring.datasource.password", conf.getSql().getPassword());
+//		properties.put("spring.jpa.properties.hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
+//		properties.put("spring.jpa.hibernate.ddl-auto", "update");
+//		
+		return properties;
 	}
 
 }

@@ -7,7 +7,7 @@ import eu.epicclan.spring.websocket.WebsocketApplication;
 import eu.epicclan.spring.websocket.utils.ServerList;
 
 @RestController
-public class TestController {
+public class ServerController {
 	
 	@GetMapping("/api/getservers")
 	public ServerList serverList() throws Exception {
