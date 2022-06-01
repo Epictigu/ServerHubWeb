@@ -1,0 +1,30 @@
+html, body {
+	height: 100%;
+	width: 100%;
+}
+
+#error_body{
+	background: rgb(216, 68, 68);
+	display: flex;
+}
+
+#error_div{
+	font-family: 'Roboto', sans-serif;
+	
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+}
+
+#error_div span{
+	margin: 0 auto 0 auto;
+	color: white;
+}
+
+#error_div #error_status{
+	font-size: 100px;
+}
+
+#error_div #error_text{
+	font-size: 35px;
+}

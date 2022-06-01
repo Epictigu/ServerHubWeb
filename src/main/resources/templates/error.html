@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title th:text="${error}"></title>
+	<link th:href="@{/css/error.css}" rel="stylesheet" />
+	<link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body id="error_body">
+	<div id="error_div">
+		<span id="error_status">Error <span th:text="${status}"></span></span>
+		<span id="error_text" th:text="${error}"></span>
+	</div>
+</body>
+</html>
