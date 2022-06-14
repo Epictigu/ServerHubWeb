@@ -1,7 +1,11 @@
 package eu.epicclan.spring.websocket.utils;
 
+import java.util.UUID;
+
 public class Server {
 
+	private UUID uuid;
+	
 	private String name;
 	private String desc;
 	private String startSSH;
@@ -16,6 +20,8 @@ public class Server {
 	public Server(String line) {
 		String[] args = line.split(";");
 		
+		this.uuid = UUID.randomUUID();
+		
 		name = args[0];
 		desc = args[1];
 		startSSH = args[2];
@@ -23,6 +29,10 @@ public class Server {
 		category = args[4];
 		icon = args[5];
 		statusCheck = args[6];
+	}
+	
+	public UUID getUUID() {
+		return uuid;
 	}
 
 	public String getName() {

@@ -41,21 +41,7 @@ public class WebsocketApplication {
 		SocketManager sManager = new SocketManager(sFile, AppConfiguration.getInstance());
 		sManager.startTask();
 		
-		SpringApplication application = new SpringApplication(WebsocketApplication.class);
-		application.setDefaultProperties(getApplicationProperties());
-		application.run(args);
+		new SpringApplication(WebsocketApplication.class).run(args);
 	}
 	
-	private static Properties getApplicationProperties() {
-		Properties properties = new Properties();
-		
-//		properties.put("spring.datasource.url", "jdbc:mysql://localhost:3306/testdb?useSSL=false");
-//		properties.put("spring.datasource.username", conf.getSql().getUser());
-//		properties.put("spring.datasource.password", conf.getSql().getPassword());
-//		properties.put("spring.jpa.properties.hibernate.dialect", "org.hibernate.dialect.MySQL5InnoDBDialect");
-//		properties.put("spring.jpa.hibernate.ddl-auto", "update");
-//		
-		return properties;
-	}
-
 }
